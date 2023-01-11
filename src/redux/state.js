@@ -1,5 +1,8 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
+const SEND_MESSAGE = 'SEND_MESSAGE';
+
 
 let store = {
 
@@ -19,6 +22,15 @@ let store = {
 
         dialogsPage: {
 
+            dialogs: [
+                { id: 1, name: 'Dimych' },
+                { id: 2, name: 'Andrey' },
+                { id: 3, name: 'Sveta' },
+                { id: 4, name: 'Sasha' },
+                { id: 5, name: 'Viktor' },
+                { id: 6, name: 'Valera' }
+            ],
+
             messages: [
                 { id: 1, message: 'Hi' },
                 { id: 2, message: 'How is your it-kamasutra?' },
@@ -27,15 +39,8 @@ let store = {
                 { id: 5, message: 'Yo' }
             ],
 
-            dialogs: [
-                { id: 1, name: 'Dimych' },
-                { id: 2, name: 'Andrey' },
-                { id: 3, name: 'Sveta' },
-                { id: 4, name: 'Sasha' },
-                { id: 5, name: 'Viktor' },
-                { id: 6, name: 'Valera' }
-            ]
-
+            newMessageBody: "",
+        
         },
 
         sidebar: {}
@@ -71,7 +76,20 @@ let store = {
         else if (action.type === 'UPDATE-NEW-POST-TEXT'){
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
-        }        
+        }
+        
+        else if(action.type === 'UPDATE_NEW_MESSAGE_BODY'){
+            this._state.dialogsPage.newMessageBody  =   action.body;
+            this._callSubscriber(this._state);
+        }
+
+        else if(action.type === 'UPDATE_NEW_MESSAGE_BODY'){
+            let body = this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.newMessageBody = '';
+            this._callSubscriber(this._state);
+        }
+        
+        
     }
           
 }
