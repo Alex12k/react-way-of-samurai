@@ -28,10 +28,8 @@ const App = (props) => {
                                 />}/>
 
 
-                        <Route exact path='/dialogs'  element={                         
-                            
-                            <Dialogs store = {props.store}/>}                       
-                        
+                        <Route exact path='/dialogs'  element={                                                     
+                            <Dialogs store = {props.store}/>}                                               
                         />
 
                         <Route       path='/news'     element={<News/>}/>
@@ -47,7 +45,7 @@ const App = (props) => {
                     Задача:
                     Сделать так чтобы проект работал как у Димыча
                 </h1>
-                <p>Самый коней 40-ого видео</p>
+                <p>Самый конец 40-ого видео</p>
 
 
 

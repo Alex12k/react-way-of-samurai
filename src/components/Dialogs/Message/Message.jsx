@@ -11,16 +11,8 @@ const Message = (props) => {
         //console.log(text);
     }
 
-    let addPost = () =>{
-        let text = newPostElement.current.value;
-        alert(text);
-    }
-
     return (
          <div className={s.dialog}>
-             <textarea onChange={messageOnChange} ref={newPostElement}  value={props.newMessageText}></textarea>
-
-             <button onClick={addPost}>Send</button>
              {props.message}
          </div>
     )
