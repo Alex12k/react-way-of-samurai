@@ -41,29 +41,21 @@ const App = (props) => {
          
 
 
-                <h1>
-                    Задача:
-                    Сделать так чтобы проект работал как у Димыча
-                </h1>
-                <p>Самый конец 40-ого видео</p>
-
-
-
-                <a target="_blank" href={'https://www.youtube.com/watch?v=TUcn_vPHfxU'}>
-                    Далее продолжаем уроком 40 c 20-ой минуты
+               
+                <a target="_blank" href={'https://youtu.be/GPabDsMyceU'}>
+                    <h1>Начинаем урок 41</h1>
                 </a>
-              
-                
-
+                                
+                <br></br>
                 <a target="_blank" href={"https://coursehunter.net/course/react-redux-professionalnaya-razrabotka?lesson"}>
                     Еще один курс
                 </a>
+                
                 
                 <ul> Из не понятных моментов:
                     <li>патерн subscribe</li>
                     <li>метод bind();</li>
                 </ul>
-
 
             </div>
 
