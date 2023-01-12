@@ -39,7 +39,7 @@ let store = {
                 { id: 5, message: 'Yo' }
             ],
 
-            newMessageBody: "",
+            newMessageBody: '',
         
         },
 
@@ -83,9 +83,10 @@ let store = {
             this._callSubscriber(this._state);
         }
 
-        else if(action.type === 'UPDATE_NEW_MESSAGE_BODY'){
+        else if(action.type === 'SEND_MESSAGE'){
             let body = this._state.dialogsPage.newMessageBody;
             this._state.dialogsPage.newMessageBody = '';
+            this._state.dialogsPage.messages.push({ id: 6, message: body });
             this._callSubscriber(this._state);
         }
         
@@ -102,6 +103,15 @@ export const addPostActionCreater = () => ({type: ADD_POST})
 export const updateNewPostTextActionCreater = (text) => ({   
         type: UPDATE_NEW_POST_TEXT,
         newText: text  
+})
+
+// Стрелочная функция возвращает объект
+export const sendMessageCreater = () => ({type: SEND_MESSAGE})
+
+// Стрелочная функция возвращает объект
+export const updateNewMessageBodyCreator = (body) => ({   
+        type: UPDATE_NEW_MESSAGE_BODY,
+        body: body 
 })
 
 

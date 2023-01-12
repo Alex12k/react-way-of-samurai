@@ -19,14 +19,20 @@ const App = (props) => {
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
+
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route  path='/profile'  element={<Profile 
                                     profilePage={props.state.profilePage} 
                                     dispatch={props.dispatch}
                                 />}/>
-                                     
-                        <Route exact path='/dialogs'  element={<Dialogs state={props.state.dialogsPage}/>}/>
+
+
+                        <Route exact path='/dialogs'  element={                         
+                            
+                            <Dialogs store = {props.store}/>}                       
+                        
+                        />
 
                         <Route       path='/news'     element={<News/>}/>
                         <Route       path='/music'    element={<Music/>}/>
@@ -35,9 +41,19 @@ const App = (props) => {
                 </div>
                 
          
-            <a target="_blank" href={'https://www.youtube.com/watch?v=TUcn_vPHfxU'}>
+
+
+                <h1>
+                    Задача:
+                    Сделать так чтобы проект работал как у Димыча
+                </h1>
+                <p>Самый коней 40-ого видео</p>
+
+
+
+                <a target="_blank" href={'https://www.youtube.com/watch?v=TUcn_vPHfxU'}>
                     Далее продолжаем уроком 40 c 20-ой минуты
-             </a>
+                </a>
               
                 
 
