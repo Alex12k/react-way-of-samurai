@@ -117,6 +117,3 @@ export const updateNewMessageBodyCreator = (body) => ({
 
 export default store;
 window.store = store;
-
-
-// Далее будем внедрять очень важный OOP объект Store
