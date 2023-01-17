@@ -42,8 +42,8 @@ const App = (props) => {
 
 
                
-                <a target="_blank" href={'https://youtu.be/GPabDsMyceU'}>
-                    <h1>Начинаем урок 41</h1>
+                <a target="_blank" href={'https://youtu.be/IUEkRTov_E4'}>
+                    <h1>Начинаем урок 42</h1>
                 </a>
                                 
                 <br></br>
