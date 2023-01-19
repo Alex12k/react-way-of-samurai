@@ -14,11 +14,14 @@ let initialState =	{
 }
 
 const profileReducer = (state = initialState, action) => {
-	
+
+	// Назначим уникальный ID поста (Мое решение, присвоения уникального ID)
+	let post_id = state.posts.length+1;
+
 	switch(action.type){			
 			case ADD_POST:						
 				let newPost = {
-					id: 5,
+					id: post_id,
 					message: state.newPostText,
 					likeCount: 0
 			 	 };	  
