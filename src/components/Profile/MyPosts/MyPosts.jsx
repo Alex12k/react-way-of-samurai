@@ -8,16 +8,18 @@ import {addPostActionCreater, updateNewPostTextActionCreater} from '../../../red
 const MyPosts = (props) => {
  
     let postsElements   =   props.posts.map(p => <Post message={p.message} likesCount={p.likeCount} key={p.id}/>);
+    
     let newPostElement  =   React.createRef();
 
-    let addPost = () => {
-        props.dispatch( addPostActionCreater()  );
+    let onAddPost = () => {
+        props.addPost();      
     }
- 
+
     let postOnChange = () => {
-            let text    = newPostElement.current.value;
-            let action  = updateNewPostTextActionCreater(text);         
-            props.dispatch(action);
+        let text    = newPostElement.current.value;
+        //props.apdateNewPostText(text);            
+        let action  = updateNewPostTextActionCreater(text);         
+        props.dispatch(action);
     }
 
 
@@ -31,7 +33,7 @@ const MyPosts = (props) => {
                 </div>
 
                 <div>
-                    <button onClick={ addPost }>Add post</button>
+                    <button onClick={ onAddPost }>Add post</button>
                 </div>
             </div>
 
