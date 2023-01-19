@@ -42,9 +42,9 @@ const App = (props) => {
 
                
                 <a target="_blank" href={'https://youtu.be/Q_UvAaKSK90'}>
-                    <h1>Начинаем урок 44</h1>
+                    <h1>Начинаем урок 44 (context API)</h1>
                 </a>
-                                
+                                 
                 <br></br>
                 <a target="_blank" href={"https://coursehunter.net/course/react-redux-professionalnaya-razrabotka?lesson"}>
                     Еще один курс
