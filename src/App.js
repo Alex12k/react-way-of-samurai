@@ -24,11 +24,12 @@ const App = (props) => {
                     <Routes>
 
                         <Route exact path='/dialogs'  element={                                                     
-                            <DialogsContainer store = {props.store}/>}                                               
+                            <DialogsContainer />}                                               
                         />
 
                         <Route  path='/profile'  element={
-                            <Profile store = {props.store}/>}/>
+                            <Profile />}
+                        />
 
 
                         <Route       path='/news'     element={<News/>}/>
@@ -41,8 +42,8 @@ const App = (props) => {
 
 
                
-                <a target="_blank" href={'https://youtu.be/Q_UvAaKSK90'}>
-                    <h1>Начинаем урок 44 (context API)</h1>
+                <a target="_blank" href={'https://www.youtube.com/watch?v=SYaHe-lP7eY'}>
+                    <h1>Начинаем урок 45 (connect, mapStateToProps, mapDispatchToProps)</h1>
                 </a>
                                  
                 <br></br>
