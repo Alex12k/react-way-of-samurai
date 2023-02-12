@@ -10,5 +10,5 @@ export const Provider = (props) => {
 
 }
 
-
+ 
 export default StoreContext;
