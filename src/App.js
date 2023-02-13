@@ -10,7 +10,7 @@ import Settings from './components/Settings/Settings';
 import {Route, Routes} from 'react-router-dom';
 
 
-
+//lets go react redux 
 
 const App = (props) => {
 
