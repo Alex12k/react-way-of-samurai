@@ -10,7 +10,7 @@ import Settings from './components/Settings/Settings';
 import {Route, Routes} from 'react-router-dom';
 
 
-//lets go react redux 
+
 
 const App = (props) => {
 
@@ -42,8 +42,8 @@ const App = (props) => {
 
 
                
-                <a target="_blank" href={'https://www.youtube.com/watch?v=SYaHe-lP7eY'}>
-                    <h1>Начинаем урок 45 (connect, mapStateToProps, mapDispatchToProps)</h1>
+                <a target="_blank" href={'https://youtube.com/watch?v=6napu-MGQDo&feature=shares'}>
+                    <h1>Начинаем урок 46</h1>
                 </a>
                                  
                 <br></br>
