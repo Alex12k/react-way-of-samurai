@@ -11,7 +11,6 @@ import {Route, Routes} from 'react-router-dom';
 
 
 
-
 const App = (props) => {
 
     return (
@@ -31,17 +30,13 @@ const App = (props) => {
                             <Profile />}
                         />
 
-
                         <Route       path='/news'     element={<News/>}/>
                         <Route       path='/music'    element={<Music/>}/>
                         <Route       path='/settings' element={<Settings/>}/>
                     </Routes>
                 </div>
                 
-         
-
-
-               
+                       
                 <a target="_blank" href={'https://youtube.com/watch?v=R3ZsEyc4BCo&feature=shares'}>
                     <h1>Начинаем урок 48</h1>
                 </a>
