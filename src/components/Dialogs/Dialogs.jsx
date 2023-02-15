@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogsItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
-import { sendMessageCreater, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer';
+//import { sendMessageCreater, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer';
 
  
  
 const Dialogs = (props) => {
-
+ 
     let state = props.dialogsPage;
 
     let dialogsElements     = state.dialogs.map(     d => <DialogsItem name={d.name} id={d.id} key={d.id}/> );
@@ -15,8 +15,11 @@ const Dialogs = (props) => {
     let newMessageBody      = state.newMessageBody;
     
 
+    /*  Вопрос как sendMessage попадает в props 
+        и почему она называется sendMessage
+    */
     let onSendMessageClick  =  () => {
-        props.onSendMessage();
+        props.sendMessage();
     } 
 
     let onNewMessageChange  =  (e) => {

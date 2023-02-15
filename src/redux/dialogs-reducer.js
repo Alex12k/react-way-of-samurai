@@ -28,28 +28,32 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
 
-	let stateCopy = { ...state,
-							//messeges: [...state.messages]
-	};
-
+	//let stateCopy;
 	switch(action.type){
 			
-			case UPDATE_NEW_MESSAGE_BODY:
-				stateCopy.newMessageBody  =   action.body;
-				return stateCopy;
-			
-			case SEND_MESSAGE:
+			case UPDATE_NEW_MESSAGE_BODY:		
+
+			/* Создаём копию и в ней перезаписываем свойство newMesageBody */
+			return { 	
+					...state,
+					newMessageBody: action.body
+			};
+				
+			case SEND_MESSAGE:			
+				let body = state.newMessageBody;
 				// Назначим уникальный ID поста (Мое решение, присвоения уникального ID)
 				let message_id = state.messages.length+1;
-				
-				let body = state.newMessageBody;
-				stateCopy.newMessageBody = '';
-				stateCopy.messages.push({ id: message_id, message: body });	
 			
+				return { 	
+					...state,
+					newMessageBody: '',
+					messages: [...state.messages, {id: message_id, message: body}]
+				};
+									
 			default:
-				return state;
-
+	 			return state;
 	}
+
 }
 
 
