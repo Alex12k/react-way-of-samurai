@@ -37,8 +37,8 @@ const App = (props) => {
                 </div>
                 
                        
-                <a target="_blank" href={'https://youtube.com/watch?v=R3ZsEyc4BCo&feature=shares'}>
-                    <h1>Начинаем урок 48</h1>
+                <a target="_blank" href={'https://youtu.be/ceSZUZZaW30'}>
+                    <h1>Урок 49: React JS практика - страница пользователей</h1>
                 </a>
                                  
                 <br></br>
@@ -50,6 +50,7 @@ const App = (props) => {
                 <ul> Из не понятных моментов:
                     <li>патерн subscribe</li>
                     <li>метод bind();</li>
+                    <li>Потренероваться со Spred операторами</li>
                 </ul>
 
             </div>
