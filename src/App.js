@@ -39,15 +39,10 @@ const App = (props) => {
                 </div>
                 
                        
-                <a target="_blank" href={'https://youtube.com/watch?v=n9op6xgJMFo&feature=shares'}>
-                    <h1>Урок 51: JS практика Users API</h1>
+                <a target="_blank" href={'https://youtu.be/O7o89_1sM5Y'}>
+                    <h1>Урок 52: Slide Effect</h1>
                 </a>
                                  
-                <br></br>
-                <a target="_blank" href={"https://youtube.com/watch?v=c34P8-9YVMQ&feature=shares"}>
-                    Еще один курс
-                </a>
-                
                 
                 <ul> Из не понятных моментов:
                     <li>патерн subscribe</li>
