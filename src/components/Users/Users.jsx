@@ -1,40 +1,22 @@
+
 import styles from './users.module.css';
+import axios from 'axios';
+
+
 
 
 let Users = (props) =>{
 
 	// Это временное НЕ правильное решение и о нем будет 
 	// говорится в следующем уроке
+
+	axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response=>{
+		
+			props.setUsers(response.data.items);
 	
-	if(props.users.length === 0){
-		props.setUsers(
-				[
-					{ 	id: 1,	
-					photoUrl: 'https://avatars.dzeninfra.ru/get-zen_doc/4079787/pub_605d73daa5f59d2919c8cbcc_605db0c8485bdb6e4a0a4b62/scale_1200',	
-					followed: false, 
-					fullName: 'Dmitry',	
-					status: 'I am a boss', 
-					location:{city: 'Minsk', country:'Belarus'} 
-	  				},
+	});
 
-					{ id: 2,	
-					photoUrl: 'https://avatars.dzeninfra.ru/get-zen_doc/4079787/pub_605d73daa5f59d2919c8cbcc_605db0c8485bdb6e4a0a4b62/scale_1200',	
-					followed: true,	
-					fullName: 'Sasha',	
-					status: 'I am a boss too', 
-					location:{city: 'Moscow', country:'Russian'} 
-		  			},
 
-					{ id: 3,	
-					photoUrl: 'https://avatars.dzeninfra.ru/get-zen_doc/4079787/pub_605d73daa5f59d2919c8cbcc_605db0c8485bdb6e4a0a4b62/scale_1200',	
-					followed: false, 
-					fullName: 'Andrew',	
-					status: 'I am a boss too', 
-					location:{city: 'Kiev', country:'Ukraine'} 
-	  				}
-				]
-			)	
-	}
 
 
 		return	<div>
@@ -45,7 +27,7 @@ let Users = (props) =>{
 					<div>
 
 						<span>
-							<img src={u.photoUrl} className={styles.userPhoto}/>
+							<img src={u.photos.small} className={styles.userPhoto}/>
 						</span>
 
 						<span>
@@ -61,13 +43,13 @@ let Users = (props) =>{
 					
 					<span>
 						<span>
-							<div>{u.fullName}</div>
+							<div>{u.name}</div>
 							<div>{u.status}</div>
 						</span>
 						
 						<span>
-							<div>{u.location.country}</div>
-							<div>{u.location.city}</div>
+							<div>{'u.location.country'}</div>
+							<div>{'u.location.city'}</div>
 						</span>	
 					</span>				
 				

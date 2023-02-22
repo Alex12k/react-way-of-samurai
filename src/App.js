@@ -39,8 +39,8 @@ const App = (props) => {
                 </div>
                 
                        
-                <a target="_blank" href={'https://youtu.be/ceSZUZZaW30'}>
-                    <h1>Урок 50: Практика REST API (Краткая теория)</h1>
+                <a target="_blank" href={'https://youtube.com/watch?v=n9op6xgJMFo&feature=shares'}>
+                    <h1>Урок 51: JS практика Users API</h1>
                 </a>
                                  
                 <br></br>
