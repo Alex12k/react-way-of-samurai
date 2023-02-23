@@ -2,42 +2,47 @@
 import styles from './users.module.css';
 import axios from 'axios';
 import userPhoto from '../../assets/images/user.png';
+import React from 'react';
 
 
-let Users = (props) =>{
 
-	// Это временное НЕ правильное решение и о нем будет 
-	// говорится в следующем уроке
-
-	if(props.users.length === 0){
-
-		axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response=>{			
-			props.setUsers(response.data.items);	
-		});
+class Users extends React.Component{
 	
-	}
+		constructor(props){			
+			super(props);
 
+			// Но на самом деле ajax запросы делаются не в конструкторе
+			axios.get("https://social-network.samuraijs.com/api/1.0/users")
+					.then(response=>{			
+								this.props.setUsers(response.data.items);	
+						});	
+		}
 
-		return	<div>
-			{
-				props.users.map(u=>	<div key={u.id}>
+		
+
+		render(){
+			return	<div>
+	
+				{
+				this.props.users.map(u=>	<div key={u.id}>
 					
 					<div>
 
-						<span>
+						<div>
 							<img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto}/>
-						</span>
+						</div>
 
-						<span>
+						<div>
 							{
 							 u.followed ? 
-									<button onClick={()=>{props.unfollow(u.id)}}>Unfollow </button> : 
-									<button onClick={()=>{props.follow(u.id)}}>	Follow 	</button>	
+									<button onClick={()=>{this.props.unfollow(u.id)}}>Unfollow </button> : 
+									<button onClick={()=>{this.props.follow(u.id)}}>	Follow 	</button>	
 							}
-						</span>				
+						</div>	
+
 					</div>
 					
-					<span>
+					<div>
 						<span>
 							<div>{u.name}</div>
 							<div>{u.status}</div>
@@ -47,11 +52,14 @@ let Users = (props) =>{
 							<div>{'u.location.country'}</div>
 							<div>{'u.location.city'}</div>
 						</span>	
-					</span>				
+					</div>				
 				
-				</div>)
-			}
-		</div>
+					</div>)
+				}
+			</div>
+		}
 }
+
+
 
 export default Users;
