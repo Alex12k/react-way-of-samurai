@@ -39,8 +39,8 @@ const App = (props) => {
                 </div>
                 
                        
-                <a target="_blank" href={'https://youtube.com/watch?v=auAtFC5nfTs&feature=shares'}>
-                    <h1>Урок 54: React JS практика - жизненный цикл, life cycle methods, componentDidMount</h1>
+                <a target="_blank" href={'https://youtube.com/watch?v=ap8HxJPwJhY&feature=shares'}>
+                    <h1>Урок 55: React JS практика - pagination, постраничный вывод пользователей</h1>
                 </a>
                                  
                 
