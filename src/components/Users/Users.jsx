@@ -24,22 +24,24 @@ class Users extends React.Component{
 			
 			
 			for (let i = 1; i <= pagesCount; i++){
-					pages.push(i);
+				pages.push(i);
 			}
 		
-			return	<div>
-				<div>
-					{pages.map(p=>{
-						return <span className={this.props.currentPage === p && styles.selectedPage}
-						onclick={
-								()=>{								
-									this.props.setCurrentPage(p)
-								}
-						
-					}
 
+			return	<div>
+				<div className ={styles.pagination}>
+					{pages.map(p=>{
+						return <span key={p} className={this.props.currentPage === p ? styles.selectedPage : ''}
 						
-						>{p}</span>
+						onClick={
+								()=>{
+									this.props.setCurrentPage(p);
+								}
+							}
+							>
+									
+								{p}</span>
+					
 					})}
 				
 				</div>

@@ -6,4 +6,15 @@
 
 .selectedPage{
 	font-weight: bold;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.pagination span{ 
+	padding: 5px 15px;
+	cursor: pointer;
+	line-height: 60px;
 }
