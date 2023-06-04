@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { followAC, setUsersAC, unfollowAC, setCurrentPageAC } from "../../redux/users-reducer";
+import { followAC, setUsersAC, unfollowAC, setCurrentPageAC, setUsersTotalCountAC } from "../../redux/users-reducer";
 import Users from "./Users";
 
 // Функция которая принимает весь глобальный State всего приложения 
@@ -15,7 +15,7 @@ let mapStateToProps =(state)=>{
 	}
 
 }
-
+ 
 // Функция служит для того, чтобы передавать дочерней репрезентационной компоненте,
 //	через props колбеки, которые репрезентационная компонента сможет вызывать
 let mapDispatchToProps =(dispatch)=>{
@@ -28,12 +28,16 @@ let mapDispatchToProps =(dispatch)=>{
 			unfollow:	(userId) =>	{
 				dispatch(unfollowAC(userId));
 			},
-			setUsers: (users)	=>	{
+			setUsers: 	(users)	=>	{
 				dispatch(setUsersAC(users));
 			},
 
-			setCurrentPage(pageNumber){
+			setCurrentPage:	(pageNumber)=>{
 				dispatch(setCurrentPageAC(pageNumber));
+			},
+
+			setTotalUsersCount:	(totalCount)=>{
+				dispatch(setUsersTotalCountAC(totalCount));
 			}
 
 		}
