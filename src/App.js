@@ -40,8 +40,8 @@ const App = (props) => {
                 
                        
                 <a target="_blank" href={'https://youtube.com/watch?v=ap8HxJPwJhY&feature=shares'}>
-                    <h1>Урок 55 минута 47:
-                        Ошибки исправленны но не понятно как работает Redux     
+                    <h1>Урок 55 минута 56:
+                        не работает   
                     </h1>
                 </a>
                                  
