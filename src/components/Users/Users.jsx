@@ -8,25 +8,26 @@ import React from 'react';
 
 class Users extends React.Component{
 
-		componentDidMount(){				
+	
+		componentDidMount(){			
+
 			axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
 					.then(response=>{			
 						this.props.setUsers(response.data.items);	
-						this.props.setTotalUsersCount(response.data.TotalCount);	
+						this.props.setTotalUsersCount(response.data.totalCount);	
 				});	
-		}
+			}
 		
 
-		onPageChanged = (pageNumber) => {
-			
+		onPageChanged = (pageNumber) => {		
 				this.props.setCurrentPage(pageNumber);
+
 				axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
 				.then(response=>{			
 					this.props.setUsers(response.data.items);	
-			});	
+				});	
 
 		}
-
 
 
 		render(){
@@ -40,13 +41,14 @@ class Users extends React.Component{
 		
 
 			return	<div>
-				
+
+				{ console.log(pages) }
+
 				<div className ={styles.pagination}>
 					{	pages.map(p=>{
 							return <span key={p} className={this.props.currentPage === p ? styles.selectedPage : ''}						
 								onClick={(e)=>{	this.onPageChanged(p);	}}>{p}</span>
-					})}
-				
+					})}				
 				</div>
 				{
 				this.props.users.map(u => <div key={u.id}>
@@ -84,7 +86,6 @@ class Users extends React.Component{
 			</div>
 		}
 }
-
 
 
 export default Users;

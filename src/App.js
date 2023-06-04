@@ -39,10 +39,8 @@ const App = (props) => {
                 </div>
                 
                        
-                <a target="_blank" href={'https://youtube.com/watch?v=ap8HxJPwJhY&feature=shares'}>
-                    <h1>Урок 55 минута 56:
-                        не работает   
-                    </h1>
+                <a target="_blank" href={'https://youtu.be/D0kB1IvCKrI'}>
+                    <h1>Урок 56 начало</h1>
                 </a>
                                  
                 
